@@ -13,6 +13,9 @@
 
 <script src="mocha.js"></script>
 <script src="chai.js"></script>
+<% libFiles.forEach(function(file) { %>
+    <script src="<%= file %>"></script>
+<% }); %>
 <% srcFiles.forEach(function(file) { %>
     <script src="<%= file %>"></script>
 <% }); %>
@@ -23,7 +26,7 @@
 <script>
 expect = chai.expect;
 mocha.checkLeaks();
-mocha.globals();
+mocha.globals(<%= globals %>);
 mocha.run();
 </script>
 

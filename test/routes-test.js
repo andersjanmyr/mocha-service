@@ -9,7 +9,10 @@ var routes = require('../lib/routes');
 
 var app = express();
 
-routes(app, {appRoot: __dirname + '/fixtures'});
+routes(app, {
+    appRoot: __dirname + '/fixtures',
+    globals: ['$']
+});
 
 describe('routes', function() {
     describe('GET /mocha.js', function(){
@@ -44,6 +47,9 @@ describe('routes', function() {
                 .expect(200)
                 .end(function(err, resp) {
                     expect(resp.text).to.match(/tapir\.js/);
+                    expect(resp.text).to.match(/tapir-test\.js/);
+                    expect(resp.text).to.match(/jquery\.js/);
+                    expect(resp.text).to.match(/\$/);
                     done();
                 });
         });
