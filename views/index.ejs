@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mocha Tests</title>
+<link rel="stylesheet" href="mocha.css" />
+<link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+
+<%- body %>
+
+<div id="mocha"></div>
+
+<script src="mocha.js"></script>
+<script src="chai.js"></script>
+<script src="scripts/lib/zepto.min.js"></script>
+<% srcFiles.forEach(function(file) { %>
+    <script src="<%= file %>"></script>
+<% }); %>
+<script>mocha.setup('bdd')</script>
+<% testFiles.forEach(function(file) { %>
+    <script src="<%= file %>"></script>
+<% }); %>
+<script>
+expect = chai.expect;
+mocha.checkLeaks();
+mocha.globals(['jQuery']);
+mocha.run();
+</script>
+
+</body>
+</html>
