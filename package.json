@@ -42,7 +42,10 @@
   },
   "dependencies": {
     "async": "~0.2.9",
-    "debug": "~0.7.3"
+    "debug": "~0.7.3",
+    "cheerio": "~0.12.4",
+    "glob": "~3.2.7",
+    "ejs": "~0.8.4"
   },
   "devDependencies": {
     "jshint": "",
