@@ -1,0 +1,11 @@
+{
+  "name": "mocha-service",
+  "version": "0.0.1",
+  "description": "Service for adding mocha client testing to an existing express app.",
+  "main": "mocha-service.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Anders Janmyr",
+  "license": "MIT"
+}
