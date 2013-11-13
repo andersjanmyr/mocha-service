@@ -1,3 +1,3 @@
-var mochaService = require('./lib/mocha-service');
+var routes = require('./lib/routes');
 
-module.exports = mochaService;
+module.exports = routes;
