@@ -1,11 +1,56 @@
 {
   "name": "mocha-service",
-  "version": "0.0.1",
-  "description": "Service for adding mocha client testing to an existing express app.",
-  "main": "mocha-service.js",
-  "scripts": {
-    "test": "npm test"
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "http://code.sonyericsson.net/webapps/mocha-service.git"
   },
-  "author": "Anders Janmyr",
-  "license": "MIT"
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec test",
+    "test-watch": "node_modules/.bin/mocha --watch test",
+    "test-debug": "node_modules/.bin/mocha test --reporter spec --debug-brk",
+    "test-ci": "node_modules/.bin/mocha test --reporter xunit > ./tmp/test-results.xml",
+    "jshint": "node_modules/.bin/jshint *.js **/*.js",
+    "jshint-ci": "node_modules/.bin/jshint --reporter checkstyle *.js **/*.js > ./tmp/jshint.xml"
+  },
+  "jshintConfig": {
+    "bitwise": true,
+    "camelcase": true,
+    "curly": false,
+    "expr": true,
+    "eqeqeq": true,
+    "immed": true,
+    "indent": 4,
+    "latedef": "nofunct",
+    "newcap": true,
+    "undef": true,
+    "unused": true,
+    "strict": true,
+    "globalstrict": true,
+    "trailing": true,
+    "maxparams": 4,
+    "maxdepth": 2,
+    "maxcomplexity": 6,
+    "node": true,
+    "browser": true,
+    "globals": {
+      "describe": true,
+      "before": true,
+      "it": true
+    }
+  },
+  "dependencies": {
+    "async": "~0.2.9",
+    "debug": "~0.7.3"
+  },
+  "devDependencies": {
+    "jshint": "",
+    "express": "",
+    "mocha": "",
+    "chai": "",
+    "sinon": "",
+    "supertest": "",
+    "supervisor": ""
+  }
 }
