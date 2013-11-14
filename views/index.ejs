@@ -3,6 +3,9 @@
 <meta charset="utf-8">
 <title>Mocha Tests</title>
 <link rel="stylesheet" href="/test/mocha.css" />
+<% cssFiles.forEach(function(file) { %>
+  <link rel="stylesheet" href="<%= file %>" />
+<% }); %>
 </head>
 <body>
 
