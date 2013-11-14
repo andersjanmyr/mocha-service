@@ -29,7 +29,10 @@
 expect = chai.expect;
 mocha.checkLeaks();
 mocha.globals(<%- globals %>);
-mocha.run();
+if (window.mochaPhantomJS)
+  mochaPhantomJS.run();
+else
+  mocha.run();
 </script>
 
 </body>
