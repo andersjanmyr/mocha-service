@@ -3,6 +3,8 @@
 An Express service that can be used for testing client side applications with
 Mocha and Chai.
 
+[![Build Status](https://travis-ci.org/andersjanmyr/mocha-service.png)](https://travis-ci.org/andersjanmyr/mocha-service)
+
 ## Usage Embedded
 
 `mochaService` sets up the tests under `/test/index.html`

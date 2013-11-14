@@ -1,9 +1,9 @@
 {
   "name": "mocha-service",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
-    "url": "http://code.sonyericsson.net/webapps/mocha-service.git"
+    "url": "git@github.com:andersjanmyr/mocha-service.git"
   },
   "main": "index.js",
   "scripts": {
