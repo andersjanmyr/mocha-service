@@ -1,6 +1,6 @@
 {
   "name": "mocha-service",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "repository": {
     "type": "git",
     "url": "git@github.com:andersjanmyr/mocha-service.git"
@@ -41,6 +41,8 @@
     }
   },
   "dependencies": {
+    "mocha": "~1.14.0",
+    "chai": "~1.8.1",
     "async": "~0.2.9",
     "debug": "~0.7.3",
     "cheerio": "~0.12.4",
@@ -51,8 +53,6 @@
   "devDependencies": {
     "jshint": "",
     "express": "",
-    "mocha": "",
-    "chai": "",
     "sinon": "",
     "supertest": "",
     "supervisor": ""
