@@ -25,6 +25,7 @@ if (app.get('env') === 'test') {
 ```
 
 Available options to `mochaService` are:
+
  * `app` An instance of an Express application.
  * `options`
  *  `appRoot`: The path to the directory with the client files (./public)
@@ -37,4 +38,20 @@ Available options to `mochaService` are:
 
 ## Usage standalone
 
+```sh
+$ bin/mocha-service --help
+Starts a client test server.
+Usage: node ./bin/mocha-service
+
+Options:
+  --help     This information
+  --root     The root directory of the client files (./public)
+  --src      Glob pattern for source files (/scripts/*.js)
+  --test     Glob pattern for test files (/scripts/test/*.js)
+  --lib      Glob pattern for lib files (/scripts/lib/*.js)
+  --css      Glob pattern for css files (/stylesheets/*.css)
+  --globals  Globals mocha should ignore (none)
+  --html     A html file whose body will be included in the file (none)
+  --port     The port of the server (env.PORT || 9002)
+```
 
