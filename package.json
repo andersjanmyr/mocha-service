@@ -5,6 +5,7 @@
     "type": "git",
     "url": "git@github.com:andersjanmyr/mocha-service.git"
   },
+  "author": "Anders Janmyr <anders@janmyr.com> (http://anders.janmyr.com)",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha --reporter spec test",
