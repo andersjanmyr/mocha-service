@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+var optimist = require('optimist')
+    .usage('Starts a client test server.\nUsage: $0')
+    .describe('help', 'This information')
+    .describe('root', 'The root directory of the client files (./public)')
+    .describe('src', 'Glob pattern for source files (/scripts/*.js)')
+    .describe('test', 'Glob pattern for test files (/scripts/test/*.js)')
+    .describe('lib', 'Glob pattern for lib files (/scripts/lib/*.js)')
+    .describe('css', 'Glob pattern for css files (/stylesheets/*.css)')
+    .describe('globals', 'Globals mocha should ignore (none)')
+    .describe('html', 'A html file whose body will be included in the file (none)')
+    .describe('port', 'The port of the server (env.PORT || 9002)');
+
+var argv = optimist.argv;
+if (argv.help)
+    return console.log(optimist.help());
+
+
+var options = {
+    appRoot: argv.root,
+    srcPattern: argv.src,
+    testPattern: argv.test,
+    libPattern: argv.lib,
+    cssPattern: argv.css,
+    globals: argv.globals,
+    appFile: argv.html,
+    port: argv.port
+};
+var server = require('../lib/server');
+process.env.NODE_ENV ='test';
+server(options);
+

@@ -45,7 +45,8 @@
     "debug": "~0.7.3",
     "cheerio": "~0.12.4",
     "glob": "~3.2.7",
-    "ejs": "~0.8.4"
+    "ejs": "~0.8.4",
+    "optimist": "~0.6.0"
   },
   "devDependencies": {
     "jshint": "",
