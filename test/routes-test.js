@@ -1,7 +1,6 @@
 'use strict';
 
 var request = require('supertest');
-var sinon = require('sinon');
 var expect = require('chai').expect;
 
 var express = require('express');
