@@ -14,7 +14,9 @@
     "jshint": "node_modules/.bin/jshint *.js **/*.js",
     "jshint-ci": "node_modules/.bin/jshint --reporter checkstyle *.js **/*.js > ./tmp/jshint.xml"
   },
-  "bin": { "mocha-service": "./bin/mocha-service" },
+  "bin": {
+    "mocha-service": "./bin/mocha-service"
+  },
   "jshintConfig": {
     "bitwise": true,
     "camelcase": true,
