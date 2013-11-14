@@ -5,6 +5,13 @@ Mocha and Chai.
 
 [![Build Status](https://travis-ci.org/andersjanmyr/mocha-service.png)](https://travis-ci.org/andersjanmyr/mocha-service)
 
+The service dynamically creates the Mocha `test.html` file. The file can be
+accessed at `http://localhost:9002/test/index.html` (or whatever port you
+choose to run it on).
+
+If you want to run the test in a command line interface, I recommend
+[mocha-phantom-js](https://github.com/metaskills/mocha-phantomjs).
+
 ## Usage Embedded
 
 `mochaService` sets up the tests under `/test/index.html`
