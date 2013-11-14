@@ -49,7 +49,7 @@ describe('routes', function() {
                     expect(resp.text).to.match(/tapir\.js/);
                     expect(resp.text).to.match(/tapir-test\.js/);
                     expect(resp.text).to.match(/jquery\.js/);
-                    expect(resp.text).to.match(/\$/);
+                    expect(resp.text).to.match(/\[\"\$\"\]/);
                     done();
                 });
         });
