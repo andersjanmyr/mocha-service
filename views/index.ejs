@@ -31,8 +31,9 @@ mocha.checkLeaks();
 mocha.globals(<%- globals %>);
 if (window.mochaPhantomJS)
   mochaPhantomJS.run();
-else
+else if (navigator.userAgent.indexOf('PhantomJS') < 0)
   mocha.run();
+
 </script>
 
 </body>
